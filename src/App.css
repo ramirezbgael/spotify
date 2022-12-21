@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+#root{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+body{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+p{
+  text-decoration: none;
+  color: white;
+}
+.App{
+  display: flex;
+  background-color:#111111;
+}
+.input{
+  border: none;
+  background-color: #1d1d1d;
+  border-radius: 4px 0px 0px 4px;
+  height: 6vh;
+  width: 62%;
+  padding: 1vh;
+  color: white;
+  font-size: 1em;
+}
+.form-button{
+  background-color: #1d1d1d;
+  border: none;
+  color: #5a5a5a;
+  height: 8vh;
+  width: 19%;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.2em;
+  transition: 300ms ease-in-out;
+}
+.form-button:hover{
+  color: white;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.logo{
+  width: 25vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2vh;
+}
+.logo >img{
+  height: 5vh;
+}
+.form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2vh;
+  height: 15vh;
+}
+.nav{
+  width: 18vw;
+  height: 100vh;
+  background-color: rgb(51, 51, 51);
+}
+.nav>ul{
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  height: 35%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav>ul>p{
+  padding-left: 2vh;
+  font-size: .6em;
+  margin-bottom: 1vh;
+}
+.nav>ul>li{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+}
+a{
+  height:6vh;
+  display: flex;
+  width: 100%;
+  padding-left: 2vh;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 300ms ease-in-out;
+}
+a:hover{
+  background-color: #8d8d8d8a;
+  transition: 300ms ease-in-out;
+}
+a>p{
+  height: 100%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 0;
+  gap: 8px;
+  transition: 300ms ease-in-out;
+  color: #5a5a5a;
+}
+a>p:hover{
+  transition: 300ms ease-in-out;
+  color: white;
+}
+a>p>i{
+  font-size: 1.4em;
+}
+main{
+  display: flex;
+  width: 82vw;
+  flex-direction: column;
+  background-color: #111111;
+}
+.router{
+  height: 88vh;
+}
+.playbar{
+  position: relative;
+  max-height: 18vh;
+  height: 18vh;
+  background-color: aqua;
+}
