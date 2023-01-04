@@ -23,7 +23,6 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
 }
 #c1{
   height: 50%;
@@ -59,7 +58,6 @@
 #c2{
   height: 50%;
   width: 100%;
-  background-color: blue;
   display: flex;
 }
 #a4{

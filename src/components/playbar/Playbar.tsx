@@ -1,21 +1,21 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './Playbar.css'
 const Playbar = () => {
-  const song = new Audio('https://cdns-preview-2.dzcdn.net/stream/c-2506ed21a8e3919ef8f25bbdbf0b3363-3.mp3')
 
+  let audioRef = useRef()
   const [playBtn, setPlayBtn] = useState('M7 6v12l10-6z')
   
   const playPause = () =>{
     if (playBtn === 'M7 6v12l10-6z'){
-      song.play()
+      audioRef.current.play()
       setPlayBtn('M8 7h3v10H8zm5 0h3v10h-3z')
     } else {
       setPlayBtn('M7 6v12l10-6z')
-      song.pause()
+      audioRef.current.pause()
     }
   }
 
-
+console.log(audioRef.current.ended)
   return (
     <div className='playbar'>
       <div className="cover">
@@ -35,7 +35,11 @@ const Playbar = () => {
             <div id="adr-previous">
               <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" style={{fill: '#ffffff', padding:'0'}}><path d="m16 7-7 5 7 5zm-7 5V7H7v10h2z"></path></svg>
             </div>
-            <div onClick={()=>playPause()} id="adr-play">
+            <audio 
+              src="https://cdns-preview-9.dzcdn.net/stream/c-9990cd5b96f85daf3f3dc57ed801a899-6.mp3" 
+              ref={audioRef}
+            ></audio>
+            <div onClick={()=>playPause()}  id="adr-play">
               <svg xmlns="http://www.w3.org/2000/svg"  width="45" height="45" viewBox="0 0 24 24" style={{fill: '#ffffff', padding:'0'}}><path d={playBtn}></path></svg>
             </div>
             <div id="adr-next">
